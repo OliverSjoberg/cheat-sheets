@@ -1,0 +1,84 @@
+Nmap things:
+https://youtu.be/4t4kBkMsDbQ
+script that does many things https://nmap.org/nsedoc/categories/vuln.html
+
+nmap -sP NETWORK IP (e.g 192.168.1.0/24)
+Scans all ips from .1.1 to .1.255 on the network				nmap -sP 192.168.1.0/24
+
+nmap -sT -p 80,443 192.168.1.1
+scan ports 80(http) and 443(https) on specified IP adress		you do not need -p unless you are specifiing other things e.g port num or range
+remove port num and -p to scan 1000 ports
+
+nmap -sS -p 80,443 192.168.1.1
+same as above just more stealthy and gets past firewalls better
+remove port num and -p to scan 1000 ports
+
+
+nmap --script vuln 192.168.1.1
+
+TAGS:
+
+-oN [FILE PATH]			e.g -oN nmap/scan (will create scan file and write to it)
+save output of scan
+
+-v		(add up to 5 letter V)
+verbose (more info i tend to use -vv or -vvv)
+
+-sC
+script scanning
+
+-sV
+version of service running on port
+
+-A
+OS detection, version detection script scanning and traceroute
+
+-O
+Scans for open ports and tries to figure out what OS they are using
+
+-D 192.168.1.1 
+uses ip adress immidiatly after as a decoy e.g  nmap -sS -D 192.168.1.1 192.168.1.60
+
+-R
+DNS search for all ips even offline ones
+
+-n
+Avoid DNS search (wont give pcs names)
+
+Common Ports:
+note: 
+
+
+tcp/23 - telecommunication, login to devices remotely with consol access NON INCRIPTED hacker can listen to packets and get passwords and usernames of anyone who uses
+
+tcp/22 - SSH (Secure Shell) exacly the same as port 23 just encripted
+SFTP protocol that transfers files and data using undelying SSH protocol (encrypted)
+
+tcp/20 (for active mode data) - FTP (File tranfer protocol) needs authentication from user, with acess can change add or delete any file on system
+tcp/21 (for control) 
+
+udp/69 - TFTP (trivial file transfer protocol) Very simple  no authentication or encryption
+
+udp/53 - DNS, port for a server that converts URLs to ip adresses 
+
+tcp/25 - SMTP simple mail transfer protocol
+
+udp/67 - DHCP (Dynamic host configuration protocol) automaticaly gives pc a IP address	requires DHCP server on network (sometimes built into router) 
+udp/68		addresses are assigned by a MAC adress in the DHCP server
+
+tcp/80 - HTTP unencrypted
+
+tcp/443 - HTTPS encrypted
+
+udp/161 - SNMP (simple network management protocol) get data and stats from devices on network 	V3 and above is encrypted 
+
+tcp/3389 - RDP (Remote Desktop Protocol) remotely connect to a desktop and control it 
+
+udp/123 - NTP (Network time protocol) syncs clocks over devices
+
+tcp/5060 - SIP (Session initiation protocol) used for ringing calling and hanging up phones 
+tcp/5061
+
+tcp/1720 - VoIP (voice over IP) same as SIP just older but still used
+
+tcp/445 - SMB (server message block) microsoft uses for file and printer info sharing 

@@ -1,0 +1,54 @@
+metasploit infomation:
+
+tab to autocomplete command
+
+search type:exploit		searches for modules labled exploit
+
+show options		shows option for a module
+
+use [MODULE NAME/DIRECTORY]		enters a modules context
+
+back		exits modules context
+
+show options		shows modules options/requirements
+
+set PARAMETER_NAME VALUE		used to set a peramiters value#
+
+setg		sets peramitor used for all modules (global value) (usefull if only attacking 1 ip adress with many modules) 
+
+unset/unset all		resets a permamiter 
+unsetg/unsetg all		resets a permamiter for all modules
+
+------------------------------------
+COMMON PERAMITERS:
+
+RHOST		 “Remote host”, the IP address of the target system (can be single ip or range in CIDR format )
+e.g	"set rhosts 10.10.165.39" sets target to 10.10.165.39
+
+RPORT: “Remote port”, the port on the target system the vulnerable application is running on.
+
+PAYLOAD: The payload you will use with the exploit.
+
+LHOST: “Localhost”, the attacking machine (your computers ip) IP address.
+
+LPORT: “Local port”, the port you will use for the reverse shell to connect back to. This is a port on your attacking machine, and you can set it to any port not used by any other application.
+
+SESSION: Each connection established to the target system using Metasploit will have a session ID. You will use this with post-exploitation modules that will connect to the target system using an existing connection.
+
+
+-----------------------------------
+LAUNCH MODULES:
+
+unset payload		clear a set payload
+
+run		runs a module
+
+check		some modules support check command to check if machine is vunerable without running it
+
+background		used in meterpreter to make exploit run in backroiund giving you control of the command line
+
+sessions		lists active sessions
+
+sessions -i [session ID]		interact with active session
+
+-z peramiter		command will run the exploit and background the session as soon as it opens.

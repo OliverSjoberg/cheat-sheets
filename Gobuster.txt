@@ -1,0 +1,7 @@
+Gobuster info
+used for scanning directorys on websites
+
+basic commands
+===============================
+
+gobuster dir -u (http://)MACHINE_IP -w WORDLIST_PATH		can use dirbuster's worlists (/usr/share/wordlists/dirbuster/FILENAME)
