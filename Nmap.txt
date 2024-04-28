@@ -17,6 +17,8 @@ remove port num and -p to scan 1000 ports
 nmap --script vuln 192.168.1.1
 
 TAGS:
+-sn
+ping sweep, sends ICMP to ips good for probing and finding out online computers
 
 -oN [FILE PATH]			e.g -oN nmap/scan (will create scan file and write to it)
 save output of scan
