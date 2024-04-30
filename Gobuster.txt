@@ -1,7 +1,32 @@
-Gobuster info
-used for scanning directorys on websites
+Overveiw: Gobuster is a tool for finding directorys on a DNSserver or website, it does this by brute force trying a list of common directorys in the supplied wordlist.
 
+Use cases:
+Gobuster can be useful in many use cases for example if a target computer is running a website you can find hidden diretorys that you wouldnt otherwise find.
+
+
+syntax:
+gobuster [mode] -u [target IP] -w [wordlist]
+
+mode examples:
+DIR   ( dir -u [target] )
+used for directory bruteforce
+
+DNS  ( dns -d [target] )
+dns subdomain brute force
 basic commands
-===============================
 
-gobuster dir -u (http://)MACHINE_IP -w WORDLIST_PATH		can use dirbuster's worlists (/usr/share/wordlists/dirbuster/FILENAME)
+VHOST ( vhost -u [target] )
+vhost brute forcing
+
+help pages:
+
+gobuster -h (for general help)
+gobuster dir -h (for dir mode help)
+gobuster dns -h (for dns mode help)
+gobuster vhost -h (for vhost mode help)
+
+wordlists: 
+wordlists have a list of directorys for gobuster to try they can be any .txt file 
+on linux gobuster wordlists are under 
+/usr/share/wordlists/dirbuster/
+we use dirbusters wordlists becsuse there are more and thet are preinsralled on kali linux and other distrobutions
