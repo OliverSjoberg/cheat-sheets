@@ -1,4 +1,5 @@
 Overveiw: Gobuster is a tool for finding directorys on a DNSserver or website, it does this by brute force trying a list of common directorys in the supplied wordlist.
+e.g say the target is google.com gobuster will try google.com/dev ect ect until it finds a directory with code in it.
 
 Use cases:
 Gobuster can be useful in many use cases for example if a target computer is running a website you can find hidden diretorys that you wouldnt otherwise find.
