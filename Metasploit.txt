@@ -1,4 +1,18 @@
 metasploit infomation:
+metasploit framework is a framework that can be used to attack a target using modules,
+modules can be split up into different catagories:
+
+Auxilery:
+these do not exploit the target computer but can help by doing useful tasks such as DoS and password cracking (similar to hydra)
+
+Evasion:
+these modules can help evade things like firewalls
+
+Exploit:
+like the name suggests exploit modules can be used to exploit a system and run a peice of code called a paymoad to allow you to do much more with the target
+
+Payload: 
+as said before payloads can be executed when you have access to a system these can do things such as add users or create metasploit sessions
 
 tab to autocomplete command
 
