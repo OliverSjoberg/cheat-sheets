@@ -1,0 +1,7 @@
+to launch: sudo bettercap -iface wlan0
+start network probing: net.probe on
+show computers on network: net.show
+set target for arp spoof: set arp.spoof.targets [TARGET IP]
+
+tags:
+save output to log file: --log log.txt 
